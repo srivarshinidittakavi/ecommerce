@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header (same as index.html) -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
@@ -37,23 +36,22 @@
         </nav>
     </header>
 
-    <!-- Product Details -->
     <section class="product-details">
         <div class="product-container">
             <div class="product-images">
                 <div class="main-image">
-                    <img src="https://via.placeholder.com/500x500" alt="Product" id="main-product-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="Product" id="main-product-image">
                 </div>
                 <div class="thumbnail-images">
-                    <img src="https://via.placeholder.com/100x100" alt="Thumbnail 1" class="thumbnail active">
-                    <img src="https://via.placeholder.com/100x100" alt="Thumbnail 2" class="thumbnail">
-                    <img src="https://via.placeholder.com/100x100" alt="Thumbnail 3" class="thumbnail">
-                    <img src="https://via.placeholder.com/100x100" alt="Thumbnail 4" class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Thumbnail 1" class="thumbnail active">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Thumbnail 2" class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Thumbnail 3" class="thumbnail">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Thumbnail 4" class="thumbnail">
                 </div>
             </div>
             
             <div class="product-info">
-                <h1 id="product-title">Product Name</h1>
+                <h1 id="product-title">Wireless Headphones</h1>
                 <div class="product-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -64,27 +62,27 @@
                 </div>
                 <div class="product-price" id="product-price">$99.99</div>
                 <p class="product-description" id="product-description">
-                    This is a great product with amazing features. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    High-quality wireless headphones with noise cancellation. 30-hour battery life and comfortable over-ear design.
                 </p>
                 
                 <div class="product-options">
                     <div class="size-selector">
                         <label for="size">Size:</label>
                         <select id="size">
-                            <option value="s">Small</option>
-                            <option value="m">Medium</option>
-                            <option value="l">Large</option>
-                            <option value="xl">X-Large</option>
+                            <option value="S">Small</option>
+                            <option value="M" selected>Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
                         </select>
                     </div>
                     
                     <div class="color-selector">
                         <label>Color:</label>
                         <div class="color-options">
-                            <span class="color-option" style="background: #000;" data-color="black"></span>
-                            <span class="color-option" style="background: #f00;" data-color="red"></span>
-                            <span class="color-option" style="background: #00f;" data-color="blue"></span>
-                            <span class="color-option" style="background: #0f0;" data-color="green"></span>
+                            <span class="color-option active" style="background: #000;" data-color="Black"></span>
+                            <span class="color-option" style="background: #f00;" data-color="Red"></span>
+                            <span class="color-option" style="background: #00f;" data-color="Blue"></span>
+                            <span class="color-option" style="background: #0f0;" data-color="Green"></span>
                         </div>
                     </div>
                     
@@ -99,7 +97,7 @@
                 </div>
                 
                 <div class="product-actions">
-                    <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+                    <button class="btn btn-primary" onclick="addToCart(1, parseInt(document.getElementById('quantity').value), document.getElementById('size').value, document.querySelector('.color-option.active')?.dataset.color)">Add to Cart</button>
                     <button class="btn btn-secondary" onclick="buyNow()">Buy Now</button>
                     <button class="wishlist-btn"><i class="far fa-heart"></i></button>
                 </div>
@@ -112,7 +110,6 @@
         </div>
     </section>
 
-    <!-- Related Products -->
     <section class="related-products">
         <h2 class="section-title">Related Products</h2>
         <div class="product-grid" id="related-products">
@@ -120,9 +117,43 @@
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UrbanCart</h3>
+                <p>Your one-stop shop for everything</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UrbanCart. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
